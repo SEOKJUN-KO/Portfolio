@@ -1,0 +1,190 @@
+﻿<!--메인 홈페이지-->
+<!doctype html>
+<html>
+<head>
+    <title>티끌 모아.home</title><!--타이틀-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/home1.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/carousel.js"></script>
+</head>
+
+<body>
+    <header><!--로고 들어가 있는 가장 상단 부분-->
+            <div id="upside">
+                <a href="home.html"><img id="logo_img" src="../src/logo2.png"></a>
+            </div>
+        </a>
+    </header>
+    <nav>
+        <!--메뉴 네비게이션 바이며 보이는 부분은 <a>만을 사용하여 위치를 잡았으며 아래에 드롭다운 하는 부분은 ul, li 를 사용하여 만들었다.-->
+        <div class="menu_bar"><!--메뉴 네비게이션  -->
+            <div class="menu_opt">
+                <a class="opt" href="cardHome.html">체크카드</a><!-- 메뉴 항상 보이는 부분-->
+                <ul class="drop" style="z-index: 900;"><!-- drop down 마우스 올렸을 때 나오는 부분-->
+                    <li>월별 소비 금액</li>
+                    <ul>
+                        <li>
+                            <a href="card20/card20.html">20만원 이하</a><!--상세 메뉴-->
+                        </li>
+                        <li>
+                            <a href="card340/card30-40.html">30 ~ 40만원</a><!--상세 메뉴-->
+                        </li>
+                        <li>
+                            <a href="card50/card50.html">50만원</a><!--상세 메뉴-->
+                        </li>
+                    </ul>
+                    <li>토너먼트</li>
+                    <ul>
+                        <li>
+                            <a href="tournament/tournament-meal-level0.html">나에게 맞는 카드 찾기</a><!--상세 메뉴-->
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="menu_opt">
+                <a class="opt" href="deposit/deposit_main.html">예금/적금</a><!-- 메뉴 항상 보이는 부분-->
+                <ul class="drop" style="z-index: 900;"><!-- drop down 마우스 올렸을 때 나오는 부분-->
+                    <li>예금</li>
+                    <ul>
+                        <li>
+                            <a href="deposit/deposit_main.html">예금 추천 상품</a><!--상세 메뉴-->
+                        </li>
+                    </ul>
+
+                    <li>적금</li>
+                    <ul>
+                        <li>
+                            <a href="account/account_main.html">적금 추천 상품</a><!--상세 메뉴-->
+                        </li>
+                    </ul>
+
+                </ul>
+            </div>
+            <div class="menu_opt">
+                <a class="opt" href="product/top5.html">뭘 원해?</a><!-- 메뉴 항상 보이는 부분-->
+                <ul class="drop" style="z-index: 900;"><!-- drop down 마우스 올렸을 때 나오는 부분-->
+                    <li>쇼핑</li>
+                    <ul>
+                        <li>
+                            <a href="product/top5.html">대학생이 사고 싶은 물건 BEST 5</a><!--상세 메뉴-->
+                        </li>
+                    </ul>
+
+                    <li>여행</li>
+                    <ul>
+                        <li>
+                            <a href="travel/travelMenu.html">추천 여행지</a><!--상세 메뉴-->
+                        </li>
+                    </ul>
+
+                </ul>
+            </div>
+            <div class="menu_opt">
+                <a class="opt" href="calander/accountBook.html">가계부</a><!-- 메뉴 항상 보이는 부분-->
+                <ul class="drop" style="z-index: 900;"><!-- drop down 마우스 올렸을 때 나오는 부분-->
+                    <li>
+                        <a href="calander/accountBook.html">가계부 바로가기</a><!--상세 메뉴-->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- carousel를 구성할 영역 설정 -->
+        <div style="height: 600px; width: 1200px;margin: 0 auto; margin-top: 100px;">
+            <!-- carousel를 사용하기 위해서는 class에 carousel와 slide 설정한다. -->
+            <div id="carousel-example-generic" class="carousel slide">
+                <ol class="carousel-indicators">
+                    <!-- li는 이미지 개수만큼 추가하고 data-target은 carousel id를 가르킨다. -->
+                    <!-- data-slide-to는 순서대로 0부터 올라가고 0은 active를 설정한다. -->
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                </ol>
+                <!-- 실제 이미지 아이템 -->
+                <!-- class는 carousel-inner로 설정하고 role은 listbox로 설정한다. -->
+                <div class="carousel-inner" role="listbox">
+                    <!-- 이미지의 개수만큼 item을 만든다. carousel-indicators의 li 태그 개수와 item의 개수는 일치해야 한다. -->
+                    <div class="item active">
+                        <!-- 아미지 설정(회전하는 이미지)--->
+                        <img src="../src/banner/banner2.png" style="height:100%">
+                    </div>
+                    <div class="item">
+                        <img src="../src/banner/banner5.png" style="height:100%">
+                    </div>
+                    <div class="item">
+                        <img src="../src/banner/banner1.png" style="height:100%">
+                    </div>
+                    <div class="item">
+                        <img src="../src/banner/banner6.png" style="height:100%">
+                    </div>
+                </div>
+
+                <!-- 왼쪽 화살표 버튼 -->
+                <!-- href는 carousel의 id를 가르킨다. -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <!-- 왼쪽 화살표 -->
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                </a>
+                <!-- 오른쪽 화살표 버튼 -->
+                <!-- href는 carousel의 id를 가르킨다. -->
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <!-- 오른쪽 화살표 -->
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                </a>
+            </div>
+
+        </div>
+    </main>
+    <!--footer 부분-->
+    <footer>
+        <div class="footer_inner"><!--footer 내용 중앙 정렬을 위해 footer_inner만듦 (margin으로 중앙 정렬 시킴)-->
+            <div class="info"><!--1조 정보-->
+                <div>
+                    developer
+                </div>
+            </div>
+            <div class="info">
+                <span>17010681 고석준</span>
+                <span>19011474 박정은</span>
+                <span>19011488 오다혜</span>
+                <span>19011505 김연신</span>
+            </div>
+            <div class="info">
+                Copyright © 2020 TEAM 1 All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript">//dropdown 위해서 fadeToggle 사용
+    // 전제가 아니라 마우스 올려놓은 부분의 세부 메뉴만 보기 위해서 this객체에서 .drop(세부 메뉴)를 찾아서 나타나게 함.
+    $(".menu_opt").hover(function () {
+        $(this).find(".drop").stop().fadeToggle(400);
+    });
+
+</script>
+<script>
+     $(function () {
+        // 이미지 슬라이드 컨트롤를 사용하기 위해서는 carousel를 실행해야한다.	
+        $('#carousel-example-generic').carousel({
+            // 슬리아딩 자동 순환 지연 시간	
+            // false면 자동 순환하지 않는다.	
+            interval: 2000,
+            // hover를 설정하면 마우스를 가져대면 자동 순환이 멈춘다.	
+            pause: "hover",
+            // 순환 설정, true면 1 -> 2가면 다시 1로 돌아가서 반복	
+            wrap: true,
+            // 키보드 이벤트 설정 여부(?)	
+            keyboard: true
+        });
+    });	
+</script>
+
+</html>

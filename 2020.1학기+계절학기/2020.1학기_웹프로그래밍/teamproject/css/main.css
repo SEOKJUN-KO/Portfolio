@@ -1,0 +1,82 @@
+/*전체 구조틀을 잡는 공통 css*/
+
+/*공통 폰트*/
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+/*전체 폰트 일치 시키기*/
+*{
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+
+/*기본 레이아웃*/
+html{
+    width: 100%;
+    height: 100%;
+    zoom: 0.8;/*전체 작게 보이게 하기 위해 zoom설정*/
+}
+
+body{
+    margin: 0 auto;
+    padding: 0;
+    width: inherit;
+    height: 100%;
+}
+
+header{
+    width: 100%;
+    height: 90px;
+    background-color: #ffe96c;
+    box-shadow: 2px 2px 18px #bbb;
+    margin-bottom: 60px;
+}
+
+article{
+    width: 100%;
+    margin: 0 auto;
+    min-height: 80%;
+}
+/*기본 레이아웃 끝*/
+
+/*article에 주던 width값을 변경하였습니다. 앞으로는 각 div안에 내용에 해당하는 요소에 width값 = 1120px을 지정해주어야 합니다.*/
+/*그러기 위해 1120px 만들 div는 width라는 class부여*/
+
+.width{
+    width: 1120px;
+    margin: 0 auto;
+}
+
+/*footer 디자인 */
+footer{
+    
+    width: 100%;
+    height: 370px;
+    border-top: 1px solid #e4e8eb;
+    background-color: #fafbfc;
+    clear: both;
+}
+
+/*footer에서 내용 들어가는 부분*/
+.footer_inner{
+
+    width: 1350px;
+    margin: 50px auto 0;
+}
+
+.footer_inner>.info{
+
+    border-top: 1px solid #e4e8eb;
+    padding: 20px 40px;
+    font-weight: 600;
+}
+
+.footer_inner span{
+    margin-right: 15px;
+    color: #777;
+    font-weight: 400;
+}
+
+.info:last-child{
+    padding-top: 100px;
+}
+/*footer에서 내용 들어가는 부분 끝*/

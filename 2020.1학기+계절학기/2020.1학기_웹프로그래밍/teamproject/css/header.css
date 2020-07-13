@@ -1,0 +1,101 @@
+/*메인페이지를 제외하고는 공통 헤더를 가지고 있어 header.css작성*/
+#upside{
+    height: 100%;
+    width: 1220px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*좌측 로고 부분*/
+.logo{
+    margin: auto 0;
+}
+
+#logo_img{
+    height: 100px;
+    display: block;
+}
+/*좌측 로고 부분 끝*/
+
+/*우측 메뉴 부분*/
+.menu_opt{
+    float: left;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    flex: 1;
+    text-align: center;
+}
+
+/*전체 메뉴 구조 잡기*/
+.menu_bar{
+    width: 600px;
+    margin: auto 20px;
+    display: flex;
+    justify-content: space-between;
+    float: right;
+}
+
+/*각각의 메뉴들*/
+.menu_opt:not(:last-child){
+    border-right: 1px #929292 solid;
+    padding-right: 10px;
+}
+
+.menu_opt:last-child{
+    margin-left: -10px;
+}
+
+.opt{
+
+    color: black;
+    text-decoration: none;
+}
+
+.opt:hover{
+    color: black;
+    text-shadow: 2px 2px 2px white;
+}
+/*각각의 메뉴들 끝*/
+
+/*drop down하면서 나타나는 세부 메뉴들*/
+.drop{
+    background-color: rgb(255, 232, 128);
+    width: 130px;
+    height: 230px;
+    display: none;
+
+}
+.menu_opt .drop{
+    position: absolute;
+}
+
+.drop>li{
+    font-weight: 600;
+    margin-top: 10px;
+}
+.drop>ul>li{
+    background-color: rgb(250, 242, 209);
+}
+.drop>ul>li:hover{
+    font-weight: 600;
+    background-color: rgb(255, 253, 233);
+}
+/*drop down하면서 나타나는 세부 메뉴들 끝*/
+
+/*ul, li, a 기본 스타일 초기화*/
+ul,li{
+    list-style: none;
+    padding: 0;
+}
+
+li{
+    margin: 0; 
+   
+}
+a{
+    text-decoration: none;
+    color: #111;
+}
+/*ul, li, a 기본 스타일 초기화 끝*/
