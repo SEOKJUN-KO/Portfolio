@@ -1,0 +1,90 @@
+/*광고 들어갈 부분 bxslider*/
+.slider {
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #ddd;
+}
+.add_img {
+    width: 760px;
+    height: 400px;
+}
+
+/*하단 광고 부분*/
+.advert {
+    overflow: hidden;
+    display: flex; /* -----------------------------------------*/
+    justify-content: space-between; /* -----------------------------------------*/
+    padding: 0 20px;
+    flex-wrap: wrap; /* -----------------------------------------*/
+    margin: 20px 0;
+}
+
+.advert-img {
+    background-size: cover;
+
+    width: 45%; /* 미디어 쿼리를 위해 % 적용-----------------------------------------*/
+    padding-top: 25%; /*페이지 줄이면 비율 따라서 동일한 이미지가 축소되도록 만듦*/
+    background-position: center center; /* -----------------------------------------*/
+
+    border-radius: 5px;
+    float: left;
+    margin: 10px 0;
+}
+
+.advert-img:nth-child(1) {
+    /*첫번째 광고*/
+    background-image: url('../../src/MainHome/ashley.jpg');
+}
+.advert-img:nth-child(2) {
+    /*두번째 광고*/
+    background-image: url('../../src/MainHome/yanolja.jpg');
+}
+.advert-img:nth-child(3) {
+    /*세번째 광고*/
+    background-image: url('../../src/MainHome/waterbomb.PNG');
+}
+.advert-img:nth-child(4) {
+    /*네번째 광고*/
+    background-image: url('../../src/MainHome/mango.png');
+}
+
+/* 태블릿 pc 미디어쿼리 */
+@media (max-width: 767px) {
+    /*bx slider 적용 부분*/
+    .slider {
+        height: 300px;
+    }
+    .add_slide img {
+        width: 100%;
+        height: 300px;
+    }
+
+    /*하단 광고 적용 부분*/
+    .advert {
+        overflow: hidden;
+        padding: 0 20px;
+    }
+
+    .advert-img {
+        /*width: 40%; height: 210px;*/ /* -----------------------------------------*/
+        background-image: url('../../src/MainHome/ashley.jpg');
+        background-size: cover;
+        width: 80%;
+        padding-top: 35%;
+        border-radius: 5px;
+        float: left;
+        margin: 10px auto;
+    }
+}
+/* 핸드폰 미디어쿼리 */
+@media (max-width: 320px) {
+    /*bx slider 적용 부분*/
+    .slider {
+        width: 100%;
+        height: 150px;
+    }
+    .add_slide img {
+        width: 100%;
+        height: 150px;
+    }
+}

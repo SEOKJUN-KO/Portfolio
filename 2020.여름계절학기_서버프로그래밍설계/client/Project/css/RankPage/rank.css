@@ -1,0 +1,267 @@
+/* 폰트 반응형*/
+html {
+    font-size: 16px;
+}
+/*카드 묶음 div*/
+.cardview {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+}
+/*카드 묶음들의 제목 ex)음식점*/
+.cardview-title {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 510;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.47;
+    letter-spacing: -1.6px;
+    color: #333333;
+    margin-bottom: 15px;
+}
+/*카드 한장의 전체 스타일*/
+.card {
+    display: flex;
+    margin: 40px 0;
+    box-shadow: 3px 3px 13px 0 rgba(0, 0, 0, 0.06);
+    transition: 0.25s;
+    width: 99%;
+    cursor: pointer;
+}
+/*카드위에 마우스 올렸을때 그림자 변화*/
+.card:hover {
+    box-shadow: 3px 3px 13px 0 rgba(0, 0, 0, 0.2);
+    transition: 1s;
+}
+/*카드 이미지*/
+.card-header {
+    height: 150px;
+    width: 24%;
+    padding: 3%;
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+    color: #fff;
+}
+/*카드 내용물*/
+.card-body {
+    width: 76%;
+    height: 150px;
+    padding: 0% 6%;
+    background-color: #fff;
+}
+/*카드 내용물 중 제목 ex)성심당*/
+.body-title {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+/*카드 내용물 중 카테고리 ex)카페*/
+.body-category {
+    margin-left: 5px;
+    color: #bfbfbf;
+    font-size: 0.9rem;
+}
+/*카드 내용물 설명*/
+.body-content {
+    font-size: 0.9rem;
+    /* 여러 줄 자르기 추가 스타일 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: 1.8;
+    height: 1.8em;
+    text-align: left;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+/*여행지 카드 내용물 설명*/
+.body-content-tour {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    /* 여러 줄 자르기 추가 스타일 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: 1.8;
+    height: 3.6em;
+    text-align: left;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+/*카드 내용물 중 리뷰수*/
+.body-review {
+    font-size: 0.8rem;
+    /* 여러 줄 자르기 추가 스타일 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: 1.8;
+    text-align: left;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    color: #bfbfbf;
+}
+/*여행지 카드 내용물 중 주소*/
+.body-address {
+    font-size: 0.8rem;
+    /* 여러 줄 자르기 추가 스타일 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: 1.8;
+    text-align: left;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+/*카드 내용물 주 기타 내용(네이버 플레이스 주소 중 주소등)*/
+.body-content-extra {
+    display: flex;
+    font-size: 0.9rem;
+    /* 여러 줄 자르기 추가 스타일 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: 1.8;
+    height: 1.8em;
+    text-align: left;
+    word-wrap: break-word;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+/*카드 내용물 중 태그들을 태그형식으로 스타일*/
+.body-content-list-tags {
+    padding: 0% 2%;
+    margin: 1% 1% 0 0;
+    background-color: #0a6ebd;
+    color: white;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+@media (max-width: 767px) {
+    /*타블렛 기준 반응형*/
+    .body-tag-box {
+        /*태그 박스 숨기기*/
+        display: none;
+    }
+    .body-title {
+        margin-top: 10px;
+        font-weight: 700;
+
+        /* 여러 줄 자르기 추가 스타일 */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        line-height: 1.8;
+        height: 1.8em;
+        text-align: left;
+        word-wrap: break-word;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    /*카테고리 숨기기*/
+    .body-category {
+        display: none;
+    }
+    #container {
+        padding-bottom: 50px;
+    }
+    .body-content-tour {
+        /* 한줄 이상일때 생략*/
+        /* 여러 줄 자르기 추가 스타일 */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        line-height: 1.8;
+        height: 1.8em;
+        text-align: left;
+        word-wrap: break-word;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+}
+@media (max-width: 320px) {
+    /*모바일 기준 반응형*/
+    html {
+        /*폰트 반응형*/
+        font-size: 14px;
+    }
+    .card {
+        /*디스플레이 변경*/
+        display: block;
+        margin: 40px 0;
+        box-shadow: 3px 3px 13px 0 rgba(0, 0, 0, 0.06);
+        transition: 0.25s;
+        width: 99%;
+        cursor: pointer;
+    }
+    .card-header {
+        /*세로 카드의 이미지*/
+        height: 150px;
+        padding: 0%;
+        width: 100%; /*너비 최대*/
+        background-size: cover;
+        background-position: center;
+        background-color: white;
+        color: #fff;
+    }
+    .body-content {
+        font-size: 16px;
+        white-space: normal;
+        line-height: 1.8;
+        height: 3.6em;
+        text-align: left;
+        word-wrap: break-word;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .body-tag-box {
+        display: none;
+    }
+    .body-title {
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .body-category {
+        display: none;
+    }
+    #container {
+        padding-bottom: 50px;
+    }
+    .body-content-tour {
+        /* 여러 줄 자르기 추가 스타일 */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        line-height: 1.8;
+        height: 3.6em;
+        text-align: left;
+        word-wrap: break-word;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+}
