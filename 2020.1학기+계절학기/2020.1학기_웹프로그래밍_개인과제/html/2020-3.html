@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>요리 블로그</title>
+        <link rel="stylesheet" type="text/css" href="../css/recipe.css"> <!--레시피 페이지 공통 css-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script><!--제이쿼리-->
+        <script src="../js/recent.js"></script><!--최근글 관련 js-->
+        <script src="../js/menu.js"></script><!--메뉴창 관련 js-->
+        <script src="../js/add.js"></script><!--광고 관련 js-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"><!--광고에 사용된 bxslider 관련 css-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"><!--광고에 사용된 bxslider 관련 css-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script><!--광고에 사용된 bxslider 관련 js-->
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script><!--광고에 사용된 bxslider 관련 js-->
+        <script>
+            $(document).ready(function(){//메뉴 관련 제이쿼리
+                $(".outer-menu-item").hover(function(){// 메뉴에 마우스를 올렸을 때
+                    $(this).find(".inner-menu").css("display","block");// display none을 block으로 바꾸어줌
+                },function(){//마우스를 땠을 때
+                    $(this).find(".inner-menu").css("display","none");//display block을 none으로 바꾸어줌
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="page-wrapper">
+            <header id="main-header"><!--블로그 상단 제목 및 이모티콘 부분-->
+                <img src="../src/COOK.png"><!--블로그 상단 요리사 이모티콘-->
+                <a href="main.html"> <!--메인 홈페이지 바로가기-->
+                    <hgroup>
+                        <h1 class="master-title">공대생의 요리 블로그</h1><!--블로그 제목-->
+                        <h2 class="master-description">요리노트</h2><!--블로그 부제목-->
+                    </hgroup>
+                </a>
+            </header>
+            <nav id="main-navigation"><!--페이지 상단 메뉴 및 검색창-->
+                <div class="pull-left">
+                    <ul class="outer-menu"><!--페이지 상단 메뉴-->
+                        <li class="outer-menu-item">
+                            <span class="menu-title">레시피</span><!--메뉴 중 레시피-->
+                                <ul class="inner-menu">
+                                    <li class="inner-menu-item" onclick="button_A()"><a href="korean-1.html">한식</a></li><!--레시피 중 한식-->
+                                    <li class="inner-menu-item" onclick="button_B()"><a href="western-1.html">양식</a></li><!--레시피 중 양식-->
+                                    <li class="inner-menu-item" onclick="button_C()"><a href="chinese-1.html">중식</a></li><!--레시피 중 중식-->
+                                </ul>
+                        </li>
+                        <li class="outer-menu-item">
+                            <span class="menu-title">완성된 요리</span><!--메뉴 중 완성된 요리-->
+                            <ul class="inner-menu">
+                                <li class="inner-menu-item" onclick="button_D()"><a href="2020-1.html">2020</a></li><!--완성된 요리 중 2020년도-->
+                                <li class="inner-menu-item" onclick="button_E()"><a href="2019-1.html">2019</a></li><!--완성된 요리 중 2019년도-->
+                                <li class="inner-menu-item" onclick="button_F()"><a href="2018-1.html">2018</a></li><!--완성된 요리 중 2018년도-->
+                            </ul>
+                        </li>
+                        <li class="outer-menu-item">
+                            <span class="menu-title">추천요리&오늘은뭐먹지?</span><!--메뉴 중 추천요리&오늘은 뭐먹지?-->
+                            <ul class="inner-menu">
+                                <li class="inner-menu-item"><a href="request.html">추천요리 게시판</a></li><!--추천요리 받아요 중 게시판-->
+                                <li class="inner-menu-item"><a href="randomrec.html">오늘 뭐 먹지?</a></li><!--추천요리 받아요 중 게시판-->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pull-right"><!--페이지 상단 검색창-->
+                    <div class="search-bar">
+                    <form><!--검색 정보 담을 폼-->
+                        <input type="text" class="input-search" /><!--검색어 적는 곳-->
+                        <input type="submit" class="input-search-submit" value="검색" /><!--검색 클릭 버튼-->
+                    </form>
+                    </div>
+                </div>
+            </nav>
+            <div id="content"><!--페이지 중단-->
+                <section id="main-section">
+                    <article><!--본문 부분-->
+                        <div class="article-header"><!--글 설명부분-->
+                            <h1 class="article-title">순대볶음</h1><!--글 제목-->
+                            <p class="article-date">2020년06월27일</p><!--글 생성연도-->
+                        </div>
+                        <div class="article-body"><!--글 본 내용 부분-->
+                            <img src="../src/Stir-fried Soondae1.jpg" /><!--음식 사진-->
+                            <img src="../src/Stir-fried Soondae2.jpg" /><!--음식 사진-->
+                            <br/>
+                            <br/>   
+                            <h3>&nbsp;먹어본 후 & 추가</h3><!--맛과 보충할 점?-->
+                            </br>
+                            <p>먹어본 후: 만들기도 간단하고 맛도 있었던 음식.
+                            </br>추가: 깻잎을 좋아하는 사람으로써 깻잎을 많이 넣는 것 추천.</p>
+                        </div>
+                    </article>
+                </section>
+                <aside id="main-aside"><!--페이지 중단 옆-->
+                    <div class="aside-list">
+                        <h3>카테고리</h3><!--완성된 요리에 관련된 카테고리-->
+                        <ul>
+                            <li onclick="button_D()"><a href="2020-1.html">2020</a></li><!--2020년도-->
+                            <li onclick="button_E()"><a href="2019-1.html">2019</a></li><!--2019년도-->
+                            <li onclick="button_F()"><a href="2018-1.html">2018</a></li><!--2018년도-->
+                        </ul>
+                    </div>
+                    <div class="recent-list">
+                        <h3>최근글</h3><!--최근 다녀온 글 목록-->
+                        <ul>
+                            <li class="l1">1. </li><!--최근 글 목록 중 첫번째-->
+                            <li class="l2">2. </li><!--최근 글 목록 중 두번째-->
+                            <li class="l3">3. </li><!--최근 글 목록 중 세번째-->
+                            <li class="l4">4. </li><!--최근 글 목록 중 네번째-->
+                            <li class="l5">5. </li><!--최근 글 목록 중 다섯번째-->
+                        </ul>
+                    </div>
+                </aside>
+                <div id="aside-add"><!--블로그 광고-->
+                    <ul class="add_slide">
+                        <li><img src="../src/hotdog.PNG" alt=""></li><!--광고 노출 페이지 중 1-->
+                        <li><img src="../src/광고.PNG" alt=""></li><!--광고 노출 페이지 중 2-->
+                    </ul>
+                </div>
+                <div id="aside-add"><!--블로그 광고-->
+                    <ul class="add_slide">
+                        <li><img src="../src/슬립온.PNG" alt=""></li><!--광고 노출 페이지 중 1-->
+                        <li><img src="../src/shoes.PNG" alt=""></li><!--광고 노출 페이지 중 2-->
+                    </ul>
+                </div>
+                <div class="pagesss"><!--페이지 하단--> 
+                </br>
+                    <ul>
+                        <li onclick=button_one()><a href="2020-1.html">1</a></li><!--다음 페이지 넘어가기--> 
+                        <li onclick=button_two()><a href="2020-2.html">2</a></li><!--다음 페이지 넘어가기--> 
+                        <li onclick=button_three()><a href="2020-3.html">3</a></li><!--다음 페이지 넘어가기-->
+                    </ul>
+                </div>
+            </div>
+            <footer id="main-footer"><!--제작자--> 
+                <a href="#">Created By 17010681 고석준</a>
+            </footer>
+        </div>
+    </body>
+    <script>
+        function button_one(){//button_one 함수가 시작
+            if(localStorage.getItem("C")==null){//로컬스토리지에 값이 없을 때
+                localStorage.setItem("C","(완)감바스");//값을 C에 저장
+            }
+            else{//로컬스토리지에 값이 있을 때
+                localStorage.setItem("C",localStorage.getItem("C")+","+"(완)감바스");//전의 값과 현재의 값을 더함
+            }
+        }
+        function button_two(){//button_two 함수가 시작
+            if(localStorage.getItem("C")==null){//로컬스토리지에 값이 없을 때
+                localStorage.setItem("C","(완)케이크");//값을 C에 저장
+            }
+            else{//로컬스토리지에 값이 있을 때
+                localStorage.setItem("C",localStorage.getItem("C")+","+"(완)케이크");//전의 값과 현재의 값을 더함
+            }
+        }
+        function button_three(){//button_three 함수가 시작
+            if(localStorage.getItem("C")==null){//로컬스토리지에 값이 없을 때
+                localStorage.setItem("C","(완)순대볶음");//값을 C에 저장
+            }
+            else{//로컬스토리지에 값이 있을 때
+                localStorage.setItem("C",localStorage.getItem("C")+","+"(완)순대볶음");//전의 값과 현재의 값을 더함
+            }
+        }
+    </script>
+</html>

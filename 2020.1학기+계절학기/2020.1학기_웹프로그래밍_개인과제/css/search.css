@@ -1,0 +1,5 @@
+#user-table {margin: 0 auto; text-align: center;} /*검색 결과를 나타내는 테이블 중앙정렬 및 글자 중앙정렬*/
+#user-table {border-collapse: collapse;}/*표의 테두리와 셀의 테두리 사이의 간격 처리 설정*/
+#user-table > thead > tr { background-color: #333; color:#fff; }/*표 제일 윗 부분 배경색 설정*/
+#user-table > thead > tr > th { padding: 8px; width: 150px; }/*표 너비 지정*/
+#user-table > tbody > tr > td { border-bottom: 1px solid gray; padding:8px; }/*표 밑줄, 내용물 여백 설정*/

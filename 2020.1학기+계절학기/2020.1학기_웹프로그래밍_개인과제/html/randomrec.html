@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>요리 블로그</title>
+        <link rel="stylesheet" type="text/css" href="../css/randomrec.css"> <!--메인 페이지 css-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script><!--제이쿼리-->
+        <script src="../js/menu.js"></script><!--메뉴 공통 js-->
+        <script>
+            $(document).ready(function(){//메뉴 관련 제이쿼리 + 랜덤 음식 추천 제이쿼리
+                $(".outer-menu-item").hover(function(){// 메뉴에 마우스를 올렸을 때
+                    $(this).find(".inner-menu").css("display","block");// display none을 block으로 바꾸어줌
+                },function(){//마우스를 땠을 때
+                    $(this).find(".inner-menu").css("display","none");//display block을 none으로 바꾸어줌
+                });
+                $(".button").click(function(){//다른 음식 보기 클릭하면
+                    var ranNum = Math.random();// 0-1사이에 랜덤한 수가 저장되고
+                    var store = Math.floor(ranNum*10+1);// 10곱하고 + 1 해준 값을 정수형으로 바꾸어
+                    $(".kimg").attr("src","../src/"+store+".jpg")// 1-10까지의 랜덤 값에 맞는 사진을 불려온다.
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <div id="page-wrapper">
+            <header id="main-header"><!--블로그 상단 제목 및 이모티콘 부분-->
+                <img src="../src/COOK.png"><!--블로그 상단 요리사 이모티콘-->
+                <a href="main.html"> <!--메인 홈페이지 바로가기-->
+                    <hgroup>
+                        <h1 class="master-title">공대생의 요리 블로그</h1><!--블로그 제목-->
+                        <h2 class="master-description">요리노트</h2><!--블로그 부제목-->
+                    </hgroup>
+                </a>
+            </header>
+            <nav id="main-navigation"><!--페이지 상단 메뉴 및 검색창-->
+                <div class="pull-left">
+                    <ul class="outer-menu"><!--페이지 상단 메뉴-->
+                        <li class="outer-menu-item">
+                            <span class="menu-title">레시피</span><!--메뉴 중 레시피-->
+                                <ul class="inner-menu">
+                                    <li class="inner-menu-item" onclick="button_A()"><a href="korean-1.html">한식</a></li><!--레시피 중 한식-->
+                                    <li class="inner-menu-item" onclick="button_B()"><a href="western-1.html">양식</a></li><!--레시피 중 양식-->
+                                    <li class="inner-menu-item" onclick="button_C()"><a href="chinese-1.html">중식</a></li><!--레시피 중 중식-->
+                                </ul>
+                        </li>
+                        <li class="outer-menu-item">
+                            <span class="menu-title">완성된 요리</span><!--메뉴 중 완성된 요리-->
+                            <ul class="inner-menu">
+                                <li class="inner-menu-item" onclick="button_D()"><a href="2020-1.html">2020</a></li><!--완성된 요리 중 2020년도-->
+                                <li class="inner-menu-item" onclick="button_E()"><a href="2019-1.html">2019</a></li><!--완성된 요리 중 2019년도-->
+                                <li class="inner-menu-item" onclick="button_F()"><a href="2018-1.html">2018</a></li><!--완성된 요리 중 2018년도-->
+                            </ul>
+                        </li>
+                        <li class="outer-menu-item">
+                            <span class="menu-title">추천요리&오늘은뭐먹지?</span><!--메뉴 중 추천요리&오늘은 뭐먹지?-->
+                            <ul class="inner-menu">
+                                <li class="inner-menu-item"><a href="request.html">추천요리 게시판</a></li><!--추천요리 받아요 중 게시판-->
+                                <li class="inner-menu-item"><a href="randomrec.html">오늘 뭐 먹지?</a></li><!--추천요리 받아요 중 게시판-->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pull-right"><!--페이지 상단 검색창-->
+                    <div class="search-bar">
+                        <form action="search.html" method="GET"><!--검색 정보 담을 폼-->
+                            <input type="text" name="q" class="input-search" /><!--검색어 적는 곳-->
+                            <input type="submit" class="input-search-submit" value="검색" /><!--검색 클릭 버튼-->
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <article>
+                <div id="container"><!--랜덤으로 음식을 추천해주는 부분-->
+                    <div id="title1"><!--이 페이지 주제 부분 -->
+                        <p>
+                            뭘 먹을까?<!-- 주제 -->
+                        </p>
+                    </div>
+                    <div class="sel"><!--의미없는 구간 나누기 -->
+                        <div class="select" ><!--사진 + 버튼 담는 부분-->
+                            <div class="simg"><!--사진 담는 부분-->
+                                <img class="kimg" src="../src/1.jpg" alt="x"> <!--선택 1 이미지-->
+                                <p class="button">다른 음식 보기</p><!--버튼 부분-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <footer id="main-footer"><!--제작자--> 
+                <a href="#">Created By 17010681 고석준</a>
+            </footer>
+        </div>
+    </body>
+</html>

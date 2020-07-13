@@ -1,0 +1,148 @@
+* {
+    margin: 0; padding: 0;
+    font-family: ‘맑은고딕’, ‘MalgunGothic’, Gothic, sans-serif;
+} /* 글자 모두 통일*/
+a { text-decoration: none; }/*링크 태그 데코 삭제*/
+li { list-style: none; }/*리스트 태그 스타일 삭제 */
+.pull-left { float: left; } /*페이지 상단 메뉴바 왼쪽으로*/
+.pull-right { float: right; }/*페이지 상단 검색 오른쪽으로*/
+body{
+    width: 960px;
+    margin: 0 auto;
+    background: #E6E6E6;
+}/*바디 중앙정렬, 너비, 배경색 설정*/
+#page-wrapper{
+    background: white;
+    margin: 40px; padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+}/*내용물 담는 것 공간 배치, 배경색 설정, 끝 부분 다듬기, 그림자 생성*/
+#main-header { padding: 40px 50px; }/*블로그 상단 및 이모티콘 부분 사이 여백 설정*/
+.master-title {
+    font-size: 30px;
+    color: #181818;
+}/*블로그 제목 글자 스타일*/
+#main-header img{
+    float: right;
+    width: 90px;
+    height: 90px;
+}/*블로그 상단 로고 사이즈 조절 및 위치 설정*/
+.master-description {
+    font-size: 15px; font-weight: 500;
+    color: #383838;
+}/*블로그 부제목 글자 스타일*/
+#main-navigation {
+    border-top: 1px solid #C8C8C8;
+    border-bottom: 1px solid #C8C8C8;
+    margin-bottom: 20px;
+    height: 40px;
+}/*페이지 상단 메뉴 및 검색창 부분 높이, 여백 및 상하 줄 생성*/
+.outer-menu-item {
+    float: left;
+    position: relative;
+}/*메뉴칸 왼쪽으로 배열 및 상대적 위치 설정*/
+.outer-menu-item:hover{
+    background: black;
+    color: white;
+}/*메뉴칸 위 마우스 올렸을 때 설정*/
+.menu-title {
+    display: block;
+    height: 30px; line-height: 30px;
+    text-align: center;
+    padding: 5px 20px;
+}/*메뉴의 제목 높이, 글자 중앙정렬, 내용물 여백, display방식 설정*/
+.inner-menu {
+    display: none;
+    position: absolute;
+    top: 40px; left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 6px rgba(5, 5, 5, 0.9);
+    z-index: 1000;
+    text-align: center;
+}/*드롭메뉴 크기, display방식, 너비, z인덱스, 포지션, 그림자 설정*/
+
+.inner-menu-item > a {
+    display: block;
+    padding: 5px 10px;
+    color: black;
+}/*드롭메뉴 여백 및 글자 설정*/
+.inner-menu-item > a:hover {
+    background: black;
+    color: white;
+}/*드롭 메뉴 마우스 올렸을 때 변화 설정*/
+.search-bar{
+    height: 26px;
+    padding: 7px;
+}/*검색창 높이 및 내용물 여백 설정*/
+.input-search{
+    display: block;
+    float: left;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 15px 0 0 15px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    width: 120px; height: 24px;
+    padding: 0 0 0 10px;
+    font-size: 12px;
+    color: #555555;
+}/*검색창 테두리, 모양, 그림자, 너비, 내용물 여백, 글자 설정 */
+.input-search:focus{
+    border-color: rgba(82, 168, 236, 0.8);
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}/*검색창 선택 시 파란줄로 테두리, 안쪽으로 그림자 생성*/
+.input-search-submit{
+    display: block;
+    float: left;
+    width: 50px; height: 26px;
+    border-radius: 0 15px 15px 0;
+    border: 1px solid #CCCCCC;
+    margin-left: -1px;
+    vertical-align: top;
+    display: inline-block;
+}/*검색 버튼 테두리, 너비, 크기, 자리배치 설정*/
+
+article{
+    height: 1000px;
+}/*아티클 높이 1000픽셀*/
+
+table {
+    margin-top: 30px;
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 2px solid #036;
+    border-bottom: 2px solid #036;
+}/*표 줄 높이와 글자 배치 위 아래 선 표의 테두리와 셀의 테두리 사이의 간격 조정*/
+
+table th {
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: #f3f6f7;
+}/* th부분 너비 내용물 여백 수직 정렬 글자 아래 선 배경색 설정*/
+table td {
+    width: 650px;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}/* td부분 너비 내용물 여백 글자 아래 선 배경색 설정*/
+.button1{
+    float: right;
+    margin-top: 15px;
+}/* 아래 글쓰기 버튼 자리배치*/
+.button1 input{
+    background-color: rgb(168, 168, 168);
+    border-radius: 0px;
+}/* 아래 글쓰기 버튼 스타일*/
+a:link{ color: black; text-decoration: none;}/* 링크 태그 스타일 설정*/
+a:visited { color: black; text-decoration: none;}/*갔다 온 링크 태그 스타일 설정*/
+* {
+    font-family: "slimGothic";
+    src: url(../src/DXSglinegoTh-KSCpc-EUC-H.ttf) format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}/*전체 글꼴 바꾸기*/

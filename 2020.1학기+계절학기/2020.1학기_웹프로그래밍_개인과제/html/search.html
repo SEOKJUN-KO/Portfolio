@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>홈페이지</title>
+    <link rel="stylesheet" href="../css/search.css"><!--페이지 개별 css-->
+    <link rel="stylesheet" href="../css/search2.css"><!--페이지 개별 css-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script><!--제이쿼리-->
+    <script src="../js/search.js"></script><!--검색창 관련 js-->
+    <script src="../js/menu.js"></script><!--메뉴 공통 js-->
+    <script>
+      $(document).ready(function(){//메뉴 관련 제이쿼리
+          $(".outer-menu-item").hover(function(){// 메뉴에 마우스를 올렸을 때
+              $(this).find(".inner-menu").css("display","block");// display none을 block으로 바꾸어줌
+          },function(){//마우스를 땠을 때
+              $(this).find(".inner-menu").css("display","none");//display block을 none으로 바꾸어줌
+          });
+      });
+  </script>
+</head>
+<body>
+  <div id="page-wrapper">
+      <header id="main-header"><!--블로그 상단 제목 및 이모티콘 부분-->
+          <img src="../src/COOK.png"><!--블로그 상단 요리사 이모티콘-->
+          <a href="main.html"> <!--메인 홈페이지 바로가기-->
+              <hgroup>
+                  <h1 class="master-title">공대생의 요리 블로그</h1><!--블로그 제목-->
+                  <h2 class="master-description">요리노트</h2><!--블로그 부제목-->
+              </hgroup>
+          </a>
+      </header>
+      <nav id="main-navigation"><!--페이지 상단 메뉴 및 검색창-->
+        <div class="pull-left">
+            <ul class="outer-menu"><!--페이지 상단 메뉴-->
+                <li class="outer-menu-item">
+                    <span class="menu-title">레시피</span><!--메뉴 중 레시피-->
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item" onclick="button_A()"><a href="korean-1.html">한식</a></li><!--레시피 중 한식-->
+                            <li class="inner-menu-item" onclick="button_B()"><a href="western-1.html">양식</a></li><!--레시피 중 양식-->
+                            <li class="inner-menu-item" onclick="button_C()"><a href="chinese-1.html">중식</a></li><!--레시피 중 중식-->
+                        </ul>
+                </li>
+                <li class="outer-menu-item">
+                    <span class="menu-title">완성된 요리</span><!--메뉴 중 완성된 요리-->
+                    <ul class="inner-menu">
+                        <li class="inner-menu-item" onclick="button_D()"><a href="2020-1.html">2020</a></li><!--완성된 요리 중 2020년도-->
+                        <li class="inner-menu-item" onclick="button_E()"><a href="2019-1.html">2019</a></li><!--완성된 요리 중 2019년도-->
+                        <li class="inner-menu-item" onclick="button_F()"><a href="2018-1.html">2018</a></li><!--완성된 요리 중 2018년도-->
+                    </ul>
+                </li>
+                <li class="outer-menu-item">
+                    <span class="menu-title">추천요리&오늘은뭐먹지?</span><!--메뉴 중 추천요리&오늘은 뭐먹지?-->
+                    <ul class="inner-menu">
+                        <li class="inner-menu-item"><a href="request.html">추천요리 게시판</a></li><!--추천요리 받아요 중 게시판-->
+                        <li class="inner-menu-item"><a href="randomrec.html">오늘 뭐 먹지?</a></li><!--추천요리 받아요 중 게시판-->
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="pull-right"><!--페이지 상단 검색창-->
+            <div class="search-bar">
+            <form action="search.html" method="GET"><!--검색 정보 담을 폼-->
+                <input type="text" name="q" class="input-search" /><!--검색어 적는 곳-->
+                <input type="submit" class="input-search-submit" value="검색" /><!--검색 클릭 버튼-->
+            </form>
+            </div>
+        </div>
+    </nav>
+      <article>
+        <table id="user-table">
+          <thead>
+              <tr>
+                  <th>번호</th><!--게시글 번호-->
+                  <th>음식</th><!--음식명-->
+                  <th>게시날짜</th><!--게시날짜-->
+                  <th>메뉴</th><!--게시글이 포함된 메뉴-->
+                  <th>카테고리</th><!--게시글이 포함된 카테고리-->
+              </tr>
+          </thead>
+  
+          <tbody>
+              <tr>
+                  <td>1</td><!--게시글 번호-->
+                  <td><a href="korean-1.html">소갈비찜</a></td><!--음식명-->
+                  <td>2020.06.25</td><!--게시날짜-->
+                  <td>레시피</td><!--게시글이 포함된 메뉴-->
+                  <td>한식</td><!--게시글이 포함된 카테고리-->
+              </tr>
+              <tr>
+                  <td>2</td><!--게시글 번호-->
+                  <td><a href="korean-2.html">떡볶이</a></td><!--음식명-->
+                  <td>2020.06.25</td><!--게시날짜-->
+                  <td>레시피</td><!--게시글이 포함된 메뉴-->
+                  <td>한식</td><!--게시글이 포함된 카테고리-->
+              </tr>
+              <tr>
+                  <td>3</td><!--게시글 번호-->
+                  <td><a href="korean-3.html">닭볶음탕</a></td><!--음식명-->
+                  <td>2020.06.27</td><!--게시날짜-->
+                  <td>레시피</td><!--게시글이 포함된 메뉴-->
+                  <td>한식</td><!--게시글이 포함된 카테고리-->
+              </tr>
+              <tr>
+                  <td>4</td><!--게시글 번호-->
+                  <td><a href="korean-4.html">순대볶음</a></td><!--음식명-->
+                  <td>2020.06.27</td><!--게시날짜-->
+                  <td>레시피</td><!--게시글이 포함된 메뉴-->
+                  <td>한식</td><!--게시글이 포함된 카테고리-->
+              </tr>
+              <tr>
+                  <td>5</td><!--게시글 번호-->
+                  <td><a href="western-1.html">카라멜 식빵</a></td><!--음식명-->
+                  <td>2020.05.28</td><!--게시날짜-->
+                  <td>레시피</td><!--게시글이 포함된 메뉴-->
+                  <td>양식</td><!--게시글이 포함된 카테고리-->
+              </tr>
+              <tr>
+                  <td>6</td><!--게시글 번호-->
+                  <td><a href="western-2.html">감바스</a></td><!--음식명-->
+                  <td>2020.06.25</td><!--게시날짜-->
+                  <td>레시피</td><!--게시글이 포함된 메뉴-->
+                  <td>양식</td><!--게시글이 포함된 카테고리-->
+              </tr>
+              <tr>
+                  <td>7</td><!--게시글 번호-->
+                  <td><a href="western-3.html">까르보나라</a></td><!--음식명-->
+                  <td>2020.06.27</td><!--게시날짜-->
+                  <td>레시피</td><!--게시글이 포함된 메뉴-->
+                  <td>양식</td><!--게시글이 포함된 카테고리-->
+              </tr>
+              <tr>
+                  <td>8</td><!--게시글 번호-->
+                  <td><a href="western-4.html">치즈케이크</a></td><!--음식명-->
+                  <td>2020.06.27</td><!--게시날짜-->
+                  <td>레시피</td><!--게시글이 포함된 메뉴-->
+                  <td>양식</td><!--게시글이 포함된 카테고리-->
+              </tr>
+              <tr>
+                  <td>9</td><!--게시글 번호-->
+                  <td><a href="chinese-1.html">멘보샤</a></td><!--음식명-->
+                  <td>2020.05.29</td><!--게시날짜-->
+                  <td>레시피</td><!--게시글이 포함된 메뉴-->
+                  <td>중식</td><!--게시글이 포함된 카테고리-->
+              </tr>
+              <tr>
+                  <td>10</td><!--게시글 번호-->
+                  <td><a href="chinese-2.html">크림새우</a></td><!--음식명-->
+                  <td>2020.06.25</td><!--게시날짜-->
+                  <td>레시피</td><!--게시글이 포함된 메뉴-->
+                  <td>중식</td><!--게시글이 포함된 카테고리-->
+              </tr>
+              <tr>
+                  <td>11</td><!--게시글 번호-->
+                  <td><a href="chinese-3.html">꿔바로우</a></td><!--음식명-->
+                  <td>2020.06.25</td><!--게시날짜-->
+                  <td>레시피</td><!--게시글이 포함된 메뉴-->
+                  <td>중식</td><!--게시글이 포함된 카테고리-->
+              </tr>
+              <tr>
+                <td>12</td><!--게시글 번호-->
+                <td><a href="chinese-4.html">마파두부</a></td><!--음식명-->
+                <td>2020.06.25</td><!--게시날짜-->
+                <td>레시피</td><!--게시글이 포함된 메뉴-->
+                <td>중식</td><!--게시글이 포함된 카테고리-->
+            </tr>
+            <tr>
+                <td>13</td><!--게시글 번호-->
+                <td><a href="2020-1.html">감바스</a></td><!--음식명-->
+                <td>2020.06.27</td><!--게시날짜-->
+                <td>완성된 요리</td><!--게시글이 포함된 메뉴-->
+                <td>2020</td><!--게시글이 포함된 카테고리-->
+            </tr>
+            <tr>
+                <td>14</td><!--게시글 번호-->
+                <td><a href="2020-2.html">치즈케이크</a></td><!--음식명-->
+                <td>2020.06.27</td><!--게시날짜-->
+                <td>완성된 요리</td><!--게시글이 포함된 메뉴-->
+                <td>2020</td><!--게시글이 포함된 카테고리-->
+            </tr>
+            <tr>
+                <td>15</td><!--게시글 번호-->
+                <td><a href="2020-3.html">순대볶음</a></td><!--음식명-->
+                <td>2020.06.27</td><!--게시날짜-->
+                <td>완성된 요리</td><!--게시글이 포함된 메뉴-->
+                <td>2020</td><!--게시글이 포함된 카테고리-->
+            </tr>
+            <tr>
+                <td>16</td><!--게시글 번호-->
+                <td><a href="2019-1.html">초밥</a></td><!--음식명-->
+                <td>2019.06.27</td><!--게시날짜-->
+                <td>완성된 요리</td><!--게시글이 포함된 메뉴-->
+                <td>2019</td><!--게시글이 포함된 카테고리-->
+            </tr>
+            <tr>
+                <td>17</td><!--게시글 번호-->
+                <td><a href="2019-2.html">오븐피자</a></td><!--음식명-->
+                <td>2019.06.27</td><!--게시날짜-->
+                <td>완성된 요리</td><!--게시글이 포함된 메뉴-->
+                <td>2019</td><!--게시글이 포함된 카테고리-->
+            </tr>
+            <tr>
+                <td>18</td><!--게시글 번호-->
+                <td><a href="2019-3.html">알리오 올리오</a></td><!--음식명-->
+                <td>2019.06.27</td><!--게시날짜-->
+                <td>완성된 요리</td><!--게시글이 포함된 메뉴-->
+                <td>2019</td><!--게시글이 포함된 카테고리-->
+            </tr>
+            <tr>
+                <td>19</td><!--게시글 번호-->
+                <td><a href="2018-1.html">어묵우동</a></td><!--음식명-->
+                <td>2018.06.27</td><!--게시날짜-->
+                <td>완성된 요리</td><!--게시글이 포함된 메뉴-->
+                <td>2018</td><!--게시글이 포함된 카테고리-->
+            </tr>
+            <tr>
+                <td>20</td><!--게시글 번호-->
+                <td><a href="2018-2.html">토스트</a></td><!--음식명-->
+                <td>2018.06.27</td><!--게시날짜-->
+                <td>완성된 요리</td><!--게시글이 포함된 메뉴-->
+                <td>2018</td><!--게시글이 포함된 카테고리-->
+            </tr>
+            <tr>
+                <td>21</td><!--게시글 번호-->
+                <td><a href="2018-3.html">푸딩</a></td><!--음식명-->
+                <td>2018.06.27</td><!--게시날짜-->
+                <td>완성된 요리</td><!--게시글이 포함된 메뉴-->
+                <td>2018</td><!--게시글이 포함된 카테고리-->
+            </tr>
+          </tbody>
+      </table>
+      </article>
+    <footer id="main-footer"><!--제작자--> 
+      <a href="#">Created By 17010681 고석준</a>
+    </footer>
+  </div>
+</body>
+</html>
