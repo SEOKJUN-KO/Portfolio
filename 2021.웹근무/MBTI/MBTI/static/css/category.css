@@ -1,0 +1,46 @@
+.contents {
+    width: 100%;
+}
+
+.content-title {
+    margin-top: 7%;
+    text-align: center;
+    font-size: 4em;
+}
+
+.content-content-1 {
+    margin-top: 10%;
+    height: 800px;
+    border: 1px solid black;
+}
+
+.wrap-characters {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.character {
+    border: 1px solid black;
+    width: 280px;
+    height: 400px;
+    margin: 40px;
+}
+
+.character img {
+    border: 1px solid black;
+}
+
+footer {
+    margin-top: 50%;
+    text-align: center;
+}
+
+/* 태블릿 pc 미디어쿼리 */
+@media (max-width: 1200px) {
+
+}
+/* 핸드폰 미디어쿼리 */
+@media (max-width: 600px) {
+
+}

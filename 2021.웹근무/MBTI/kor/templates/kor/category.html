@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=width-device, initial-scale=1.0">
+        <title>성격유형 | Company</title>
+        <link rel="stylesheet" href="{% static 'css/frame.css' %}">
+        <link rel="stylesheet" href="{% static 'css/category.css' %}">
+    </head>
+    <nav>
+        <div class="left-logo">
+            <a href="{% url "kor:index" %}"><img src="" alt="logo"></a>
+        </div>
+        <div class="navigation">
+            <ul class="navigation-ul">
+                <a href="{% url "kor:test" %}" class="link"><li class="navigation-li">성격 유형 검사</li></a>
+                <a href="{% url "kor:category" %}" class="link"><li class="navigation-li">성격 유형</li></a>
+                <a href="{% url "kor:contact" %}"><li class="navigation-li">연락처</li></a>
+            </ul>
+        </div>
+        <img class="tab-icon" src="" alt="tab"> <!-- 클릭 시 탭 메뉴-->
+        <div class="below-tablet">
+             <div class="tab">
+                 <div class="wrap-tab-test-start-button"><button class="tab-test-start">검사 실시</button></div>
+                 <ul class="tab-ul">
+                     <a href="{% url "kor:test" %}" class="link"><li class="tab-li">성격 유형 검사</li></a>
+                     <a href="{% url "kor:category" %}" class="link"><li class="tab-li">성격 유형</li></a>
+                     <a href="{% url "kor:contact" %}" class="link"><li class="tab-li">연락처</li></a>
+                 </ul>
+             </div><!--tab-->
+        </div>
+    </nav>
+    <div class="wrap-contents"><!--background-image로 처리하기 -->
+        <div class="contents">
+            <body>
+                <div class="content-title">
+                    성격 유형
+                </div>
+                <div class="content-content-1">
+                    <div class="wrap-characters">
+                        <a href="{% url 'kor:category_detail' %}">
+                            <div class="character">
+                                <img src="" alt="캐릭터">
+                                <p>
+                                    용의주도한 전략가
+                                    </br>
+                                    INTJ-A / INTJ-T
+                                    </br>
+                                    상상력이 풍부하며 철두철미한 계획을 세우는 전략가형
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="character">
+                                <img src="" alt="캐릭터">
+                                <p>
+                                    용의주도한 전략가
+                                    </br>
+                                    INTJ-A / INTJ-T
+                                    </br>
+                                    상상력이 풍부하며 철두철미한 계획을 세우는 전략가형
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="character">
+                                <img src="" alt="캐릭터">
+                                <p>
+                                    용의주도한 전략가
+                                    </br>
+                                    INTJ-A / INTJ-T
+                                    </br>
+                                    상상력이 풍부하며 철두철미한 계획을 세우는 전략가형
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="character">
+                                <img src="" alt="캐릭터">
+                                <p>
+                                    용의주도한 전략가
+                                    </br>
+                                    INTJ-A / INTJ-T
+                                    </br>
+                                    상상력이 풍부하며 철두철미한 계획을 세우는 전략가형
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="content-content-2">
+
+                </div>
+
+            </body>
+            <footer>
+                ©2011-2021 NERIS Analytics Limited</br>
+            </footer>
+        </div><!--contents-->
+    </div><!--wrap-contents-->
+    <script src="{% static 'js/frame.js' %}" type="text/javascript"></script>
+</html>

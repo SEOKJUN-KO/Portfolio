@@ -1,0 +1,76 @@
+.content-title {
+    margin-top: 13%;
+    text-align: center;
+    font-size: 2.4em;
+    font-weight: 900;
+}
+
+.content-content {
+    margin-top: 4%;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.wrap-button {
+    margin-top: 7%;
+    text-align: center;
+}
+
+.wrap-button button {
+    width: 350px;
+    height: 75px;
+    border-radius: 50px;
+    background: #72db72;
+    font-size: 1.3em;
+}
+
+.wrap-button button:hover {
+    background: #339233;
+}
+
+footer{
+    margin-top: 65%;
+    text-align: center;
+}
+
+/* 태블릿 가로 미디어쿼리 */
+@media (max-width: 1200px) {
+
+    .content-title{
+        margin-top: 8%;
+    }
+
+}
+/* 태블릿 세로 미디어쿼리 */
+@media (max-width: 750px) {
+
+    .content-title{
+        margin-top: 14%;
+        font-size: 1.4em;
+    }
+
+    .content-content {
+        font-size: 1.2em;
+    }
+}
+/* 핸드폰 미디어쿼리 */
+@media (max-width: 400px) {
+
+    .content-title{
+        margin-top: 18%;
+        font-size: 21.6px;
+    }
+
+    .content-content {
+        margin-top: 8%;
+        font-size: 1em;
+        line-height: 180%;
+    }
+
+    .wrap-button button {
+        margin-top: 10%;
+        width: 290px;
+        height: 64px;
+    }
+
+}
