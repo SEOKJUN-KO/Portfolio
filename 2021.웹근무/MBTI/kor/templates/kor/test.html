@@ -43,34 +43,48 @@
                     <div></div>
                 </div>
                 <div class="content-bar">
-                    <p class="percent">0%</p>
-                    <div class="graph-bar"></div>
+                    <p class="percent-word">0%</p>
+                    <div class="graph-bar">
+                        <div class="percent-graph"></div>
+                    </div>
                 </div>
                 <div class="content-test">
                     <p>자신이 다른 사람들보다 뛰어나다고 생각합니다.</p>
                     <div class="test-buttons">
+                        <p class="agree">동의</p>
+                        <div class="wrap-test-buttons">
+                            <button class="agree-3" onclick="increase()"></button>
+                            <button></button>
+                            <button></button>
+                            <button></button>
+                            <button></button>
+                            <button></button>
+                            <button></button>
+                        </div>
+                        <p class="disagree">비동의</p>
+                    </div>
+                    <div class="mobile-agree-div">
                         <p>동의</p>
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
                         <p>비동의</p>
                     </div>
                 </div>
                 <div class="content-test">
                     <p>자신이 다른 사람들보다 뛰어나다고 생각합니다.</p>
                     <div class="test-buttons">
+                        <p class="agree">동의</p>
+                        <div class="wrap-test-buttons">
+                            <button class="agree-3" onclick="increase()"></button>
+                            <button class="agree-2"></button>
+                            <button class="agree-1"></button>
+                            <button class="zero"></button>
+                            <button class="disagree-1"></button>
+                            <button class="disagree-2"></button>
+                            <button class="disagree-3"></button>
+                        </div>
+                        <p class="disagree">비동의</p>
+                    </div>
+                    <div class="mobile-agree-div">
                         <p>동의</p>
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
                         <p>비동의</p>
                     </div>
                 </div>
@@ -90,8 +104,9 @@
     </div><!--wrap-contents-->
     <div class="sticky-bar">
         <p class="sticky-percent">0%</p>
-        <div class="sticky-graph-bar"></div>
+        <div class="sticky-graph-bar"><div class="sticky-percent-graph"></div></div>
     </div>
     <script src="{% static 'js/frame.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/test.js' %}" type="text/javascript"></script>
     </body>
 </html>

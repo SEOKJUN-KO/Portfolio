@@ -20,6 +20,14 @@
     justify-content: center;
 }
 
+.line1 {
+    display: flex;
+}
+
+.line2 {
+    display: flex;
+}
+
 .character {
     border: 1px solid black;
     width: 280px;
@@ -37,10 +45,46 @@ footer {
 }
 
 /* 태블릿 pc 미디어쿼리 */
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
+
+    .character {
+        width: 250px;
+        height: 380px;
+        margin: 30px;
+    }
 
 }
-/* 핸드폰 미디어쿼리 */
-@media (max-width: 600px) {
+
+/* 태블릿 pc 미디어쿼리 */
+@media (max-width: 1200px) {
+
+    .content-content-1 {
+        height: 1200px;
+    }
+
+    .line1 {
+        display: block;
+    }
+
+    .line2 {
+        display: block;
+    }
+
+    .character {
+        width: 280px;
+        height: 400px;
+        margin: 140px;
+    }
+}
+
+@media (max-width: 900px) {
+    .character {
+        width: 250px;
+        height: 380px;
+        margin: 30px;
+    }
+}
+
+@media (max-width: 600px){
 
 }
