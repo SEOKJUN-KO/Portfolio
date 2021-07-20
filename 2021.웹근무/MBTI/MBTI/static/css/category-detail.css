@@ -20,31 +20,8 @@
     height: 300px;
 }
 
-.wrap-famous {
-    margin-top: 150px;
-    border: 1px solid black;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
+.celebrity {
 
-.wrap-famous button {
-    width: 80px;
-    height: 200px;
-}
-
-
-.famous {
-    width: 300px;
-    height: 450px;
-    border: 1px solid black;
-
-}
-
-.famous:nth-child(n+7) {
-    display: none;
 }
 
 .content-sns {
@@ -68,10 +45,6 @@ footer{
 
 /* 태블릿 pc 미디어쿼리 */
 @media (max-width: 1200px) {
-    .famous {
-        width: 300px;
-
-    }
 
 }
 /* 핸드폰 미디어쿼리 */

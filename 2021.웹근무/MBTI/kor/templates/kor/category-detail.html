@@ -57,35 +57,23 @@
             </div><!--contents-->
         </div><!--wrap-contents-->
 
-    <div class="wrap-famous">
-        <button onclick="change()"><</button>
-        <div class="famous">1</div>
-        <div class="famous">2</div>
-        <div class="famous">3</div>
-        <div class="famous">4</div>
-        <div class="famous">5</div>
-        <div class="famous">6</div>
-        <div class="famous">7</div>
-        <div class="famous">8</div>
-        <div class="famous">9</div>
-        <button>></button>
-    </div>
-    <div class="content-sns">
-        <p>K</p>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-    </div>
+        <div class="content-sns">
+            <p>K</p>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
     </body>
     <footer>
         ©2011-2021 NERIS Analytics Limited</br>
     </footer>
     <script src="{% static 'js/frame.js' %}" type="text/javascript"></script>
     <script>
-        const famous = document.getElementsByClassName("famous");
+        const transform = document.getElementsByClassName("wrap-famous");
 
         function change(){
+            transform[0].style.background = 'yellow';
         }
     </script>
 </html>
