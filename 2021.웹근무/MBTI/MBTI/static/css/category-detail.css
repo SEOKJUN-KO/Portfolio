@@ -20,8 +20,49 @@
     height: 300px;
 }
 
-.celebrity {
+.people {
+    margin-top: 30%;
+    height: 600px;
+    border: 1px solid black;
+}
+.people h2{
+    text-align: center;
+}
 
+.people section {
+    display: flex;
+}
+
+.wrap-famous {
+    display: flex;
+    overflow: hidden;
+    direction: ltr;
+
+}
+
+.do-animation {
+    display: flex;
+    transition: all 200ms ease-out 0s;
+    transform: translate3d(0px, 0px, 0px);
+    max-height: 367px;
+    border: 1px solid black;
+}
+
+.famous {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 442.5px;
+    height: 392px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.avatar {
+    border: 1px solid black;
+    width: 270px;
+    height: 275px;
 }
 
 .content-sns {

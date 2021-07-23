@@ -56,7 +56,57 @@
                     </div>
             </div><!--contents-->
         </div><!--wrap-contents-->
-
+        <div class="people">
+            <h2>건축가형에 속하는 유명인</h2>
+            <section>
+                <button class="" onclick="change1()"><</button>
+                <div class="wrap-famous">
+                    <div class="do-animation">
+                        <div>
+                            <div class="famous">
+                                <div class="avatar">
+                                    <img scr="" alt="1">
+                                </div>
+                                <div class="name">1</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="famous">
+                                <div class="avatar">
+                                    <img scr="" alt="2">
+                                </div>
+                                <div class="name">2</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="famous">
+                                <div class="avatar">
+                                    <img scr="" alt="3">
+                                </div>
+                                <div class="name">3</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="famous">
+                                <div class="avatar">
+                                    <img scr="" alt="4">
+                                </div>
+                                <div class="name">4</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="famous">
+                                <div class="avatar">
+                                    <img scr="" alt="5">
+                                </div>
+                                <div class="name">5</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="" onclick="change2()">></button>
+            </section>
+        </div>
         <div class="content-sns">
             <p>K</p>
             <button></button>
@@ -70,10 +120,20 @@
     </footer>
     <script src="{% static 'js/frame.js' %}" type="text/javascript"></script>
     <script>
-        const transform = document.getElementsByClassName("wrap-famous");
+        const transform = document.getElementsByClassName("do-animation");
+        var value = 0;
+        var word = "";
 
-        function change(){
-            transform[0].style.background = 'yellow';
+        function change1(){
+            value = value - 200;
+            word = "translate3d("+value + "px"+",0px,0px)";
+            transform[0].style.transform = word;
+        }
+
+        function change2(){
+            value = value + 200;
+            word = "translate3d("+value + "px"+",0px,0px)";
+            transform[0].style.transform = word;
         }
     </script>
 </html>
