@@ -1,7 +1,6 @@
 import './App.css';
-import React, {useState} from 'react';
-import { func } from 'prop-types';
-import { date } from 'language-tags';
+import React, {useState, useEffect} from 'react';
+
 
 function App() {
   return (
@@ -12,6 +11,9 @@ function App() {
     </div>
   );
 }
+
+var funcStyle = 'color:blue';
+var funcId = 0;
 
 function FuncComp(props){
   var numberState = useState(props.initNumber);
@@ -24,7 +26,15 @@ function FuncComp(props){
   
   var [_date, setDate] = useState((new Date()).toString());
 
-  console.log('numberState', numberState);
+  //sideEffect
+  useEffect(function(){
+    console.log('%cfunc => useEffect( componentDidMount & componentDidUpdate ) '+(++funcId), funcStyle);
+    document.title = number + ' : ' + _date;
+    return function(){ // 퇴장할 때 clean up
+      console.log('%cfunc => useEffect return( componentDidMount & componentDidUpdate ) '+(++funcId), funcStyle); 
+    }
+  });
+  console.log('%cfunc => render '+(++funcId), funcStyle);
   return(
     <div className="container">
       <h2>function style component</h2>
@@ -44,12 +54,21 @@ function FuncComp(props){
   );
 }
 
+var classStyle = 'color:red';
 class ClassComp extends React.Component{
   state = {
     number: this.props.initNumber,
     date: (new Date()).toString()
   }
+  // componentWillMount(){
+  //   console.log('%cclass => componentWillMount', classStyle);
+  // }
+  // componentDidMount(){
+  //   console.log('%cclass => componentDidMount', classStyle);
+  // } life cycle 관련 함수 바뀜
   render(){
+    console.log('%cclass => render', classStyle);
+
     return(
       <div className="container">
         <h2>class style component</h2>
