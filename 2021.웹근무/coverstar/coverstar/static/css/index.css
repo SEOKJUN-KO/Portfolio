@@ -1,0 +1,346 @@
+@font-face {
+    font-family: 'GmarketSans';
+    src: url("GmarketSansTTFMedium.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url("GmarketSansTTFBold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url("GmarketSansTTFLight.ttf") format('truetype');
+}
+
+
+*{
+    z-index: 4;
+}
+
+body{
+    width: 100%;
+    height: 1750px;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+.img_star_BG1{
+    position: absolute;
+    top: 158px;
+    left: 1441.3px;
+    width: 178.1px;
+    height: 170px;
+}
+
+.img_star_BG2{
+    position: absolute;
+    top: 347px;
+    left: 101.2px;
+    width: 290.2px;
+    height: 277px;
+}
+
+.img_star_BG3{
+    position: absolute;
+    top: 1272px;
+    left: 1409.9px;
+    width: 290.2px;
+    height: 277px;
+}
+
+.oval1{
+    position: absolute;
+    top: 190px;
+    left: 534px;
+    width: 58px;
+    height: 58px;
+    border-radius: 30px;
+    background-color: #ffedf3;
+}
+
+.oval2{
+    position: absolute;
+    top: 687px;
+    left: 1364px;
+    width: 45px;
+    height: 45px;
+    border-radius: 23px;
+    background-color: #ffedf3;
+}
+
+.oval3{
+    position: absolute;
+    top: 905px;
+    left: 319px;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #ffedf3;
+}
+
+.oval4{
+    position: absolute;
+    top: 892px;
+    left: 560px;
+    width: 164px;
+    height: 164px;
+    border-radius: 82px;
+    background-color: #ffedf3;
+}
+
+.img_pen {
+    position: absolute;
+    top: 413px;
+    left: 1140px;
+    width: 207px;
+    height: 385px;
+    object-fit: contain;
+}
+
+.img_02{
+    margin-top: 114px;
+    z-index: 7;
+    width: 554.9px;
+    height: 85px;
+    object-fit: contain;
+    opacity: 0.9;
+    display: block;
+}
+
+#modal {
+    display: none;
+    z-index: 9;
+    width: 90%;
+    height: 1500px;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.2);
+    border: solid 1px #e6e6e6;
+    font-family: GmarketSans;
+}
+
+.white-box{
+    margin-top: -50px;
+    z-index: 6;
+    width: 600px;
+    height: 1596px;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.2);
+    border: solid 1px #e6e6e6;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.wrap-form{
+    width: 335px;
+}
+
+.application-title{
+    margin-top: 90px;
+    height: 30px;
+    font-family: GmarketSansBold;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2d2d2d;
+    text-align: center;
+}
+
+.application-subject{
+    margin-top: 40px;
+    height: 26px;
+    font-family: GmarketSansBold;
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -0.8px;
+    color: #ef5184;
+    border-bottom: #ef5184 2px solid;
+}
+
+.application-subtitle1 {
+    margin-top: 24px;
+    height: 14px;
+    font-family: GmarketSans;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #a0a0a0;
+}
+
+.application-subtitle {
+    margin-top: 20px;
+    height: 14px;
+    font-family: GmarketSans;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #a0a0a0;
+}
+
+input{
+    margin-top: 6px;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: solid 1px #c8c8c8;
+    background-color: #ffffff;
+}
+
+input:focus {
+    outline-color: #ef5184;
+}
+
+textarea {
+    margin-top: 6px;
+    width: 100%;
+    height: 180px;
+    resize: none;
+    border: solid 1px #c8c8c8;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+textarea:focus {
+    outline-color: #ef5184;
+}
+
+.check{
+    font-size: 0.7em;
+    display: flex;
+    align-items: center;
+}
+
+.check-checkbox1{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 10px;
+    border: solid 1px #c8c8c8;
+}
+
+.check-checkbox2{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 10px;
+    background-image: url("../img/ico-check-on.png");
+    border: none;
+    display: none;
+}
+
+.checkbox-right{
+    margin-left: 10px;
+    width: 143px;
+    height: 14px;
+    font-family: GmarketSans;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2d2d2d;
+}
+
+.pop-paper{
+    margin-left: 130px;
+    height: 14px;
+    font-family: GmarketSans;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #a0a0a0;
+}
+
+ a:link { color: darkgrey;}
+ a:visited { color: darkgrey;}
+ a:hover { color: darkgrey;}
+
+.submit-end {
+    margin-top: 57px;
+    width: 335px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ef5184;
+    font-family: GmarketSans;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+    .modal_flex{
+        display: flex;
+        justify-content: center;
+    }
+    .modal_content{
+        margin-left: 10px;
+        margin-top: 130px;
+        width: 80%;
+    }
+
+@media (max-width: 750px) {
+
+    .img_pen{
+        display: none;
+    }
+    .img_02{
+        width: 345px;
+        height: 52px;
+    }
+
+    .white-box{
+        margin-top: -30px;
+        width: 375px;
+        height: 1586px;
+    }
+
+    .application-title{
+        margin-top: 70px;
+    }
+    .img_star_BG1{
+        display: none;
+    }
+
+    .oval2{
+        display: none;
+    }
+
+    .img_star_BG3{
+        display: none;
+    }
+
+    .oval1{
+        display: none;
+    }
+
+    .oval4{
+        display: none;
+    }
+
+    #modal{
+        font-size: 10px;
+        height: 950px;
+    }
+
+    .modal_content{
+        margin-top: 70px;
+    }
+}

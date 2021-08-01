@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * {
+    box-sizing: border-box;
+    }
+
+    .mail_container{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .label{
+        font-weight: bolder;
+        margin-bottom: 25px;
+    }
+
+    .output{
+        margin-bottom: 10px;
+        line-height: 150%;
+    }
+  </style>
+  <title>Email</title>
+</head>
+<body>
+    <div class="mail_container">
+        <div class="output">이름 : {{ name1 }}</div>
+        <div class="output">이메일 : {{ mail }}</div>
+        <div class="output">연락처(전화번호) : {{ call }}</div>
+        <div class="output">사는구역(구까지) : {{ location }}</div>
+        <div class="output">가장 자신있는 장르 : {{ genre }}</div>
+        <div class="output">연주 가능한 악기 : {{ instrument }}</div>
+        <div class="output">직업 : {{ job }}</div>
+        <div class="output">커버곡 제목 : {{ title }}</div>
+        <div class="output">커버곡 가수 : {{ singer }}</div>
+        <div class="output">영상링크 : {{ link }}</div>
+        <div class="output">한마디 : {{ words }}</div>
+    </div>
+</body>
+</html>

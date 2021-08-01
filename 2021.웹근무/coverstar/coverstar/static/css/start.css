@@ -1,0 +1,445 @@
+@font-face {
+    font-family: 'GmarketSans';
+    src: url("GmarketSansTTFMedium.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url("GmarketSansTTFBold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url("GmarketSansTTFLight.ttf") format('truetype');
+}
+
+*{
+    z-index: 4;
+}
+
+html{
+    width: 100%;
+    height: 1857px;
+    background-color: #ef5185;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+    background-image: url("../img/img-background@3x.png");
+    background-position: center -40%;
+    background-size: cover;
+}
+
+.top-banner{
+    display: block;
+    z-index: 7;
+    text-align: center;
+    width: 100%;
+    height: 120px;
+    background-color: #ffffff;
+}
+
+.inside-banner{
+    z-index: 7;
+    width: 600px;
+    height: 120px;
+}
+
+.logo{
+    margin-top: 67px;
+    display: flex;
+    justify-content: center;
+}
+
+.img_logo{
+    width: 407px;
+    height: 272px;
+}
+
+.title{
+    width: 100%;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: GmarketSansBold;
+    font-size: 45px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.27;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    z-index: 7;
+}
+
+.red-tag{
+    margin-top: 37px;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+.red-tag-img {
+    display: block;
+    z-index: 4;
+    width: 221px;
+    height: 45px;
+    background-image: url("../img/img-r.png");
+    background-size: cover;
+}
+
+.tag-title{
+    display: block;
+    font-family: GmarketSansBold;
+    font-size: 14.4px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 30px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #da1414;
+    margin-left: -10px;
+}
+
+.date{
+    width: 100%;
+    height: 30px;
+    font-family: GmarketSansLight;
+    font-size: 24px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    z-index: 7;
+}
+
+button{
+    margin-top: 54px;
+    width: 360px;
+    height: 80px;
+    border-radius: 40px;
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.3);
+    border: solid 4px #f0f0e8;
+    background-color: #ffd818;
+    font-family: GmarketSansBold;
+    font-size: 32px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #802040;
+    z-index: 7;
+}
+
+.white-box{
+    margin-top: 50px;
+    width: 600px;
+    height: 934px;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    z-index: 5;
+}
+
+.line1{
+    margin-top: 61px;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.ico_01{
+    width: 50px;
+    height: 50px;
+}
+
+.content-title1{
+    font-family: GmarketSansBold;
+    font-size: 20px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2d2d2d;
+}
+
+.content-desc{
+    margin-top: 19px;
+    margin-left: 96px;
+    width: 454px;
+    font-family: GmarketSans;
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: -0.4px;
+    color: #2d2d2d;
+}
+
+.line2{
+    margin-top: 30px;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.ico-day{
+    width: 50px;
+    height: 50px;
+}
+
+.line3{
+    margin-left: 96px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.year{
+    font-family: GmarketSansBold;
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    color: #ef5185;
+}
+
+.year-star1{
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+}
+
+.year-desc{
+    margin-left: 22px;
+    font-family: GmarketSans;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: -0.4px;
+    color: #ef5185;
+}
+
+.year-description{
+    margin-top: 3px;
+    margin-left: 152px;
+    border-left: 2px solid #ef5185;
+    height: 80px;
+}
+
+.description-content{
+    width: 314px;
+    margin-left: 27px;
+    font-family: GmarketSans;
+  font-size: 14px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: normal;
+  color: #2d2d2d;
+}
+
+.line4{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.year-star2{
+    width: 12px;
+    height: 12px;
+    margin-left: 147px;
+}
+
+.line5{
+    margin-left: 96px;
+    display: flex;
+    align-items: center;
+}
+
+.bottom{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.left-huwon{
+    margin-left: 50px;
+    width: 42px;
+    height: 42px;
+}
+
+.content-title2{
+    font-family: GmarketSansBold;
+    font-size: 20px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2d2d2d;
+}
+
+.right-huwon{
+    margin-left: 32px;
+    width: 125px;
+    height: 36px;
+}
+
+.right-huwon2{
+    margin-left: 30px;
+    width: 172px;
+    height: 30px;
+}
+
+#show_media{
+    display: none;
+}
+
+.mobile{
+    display: none;
+}
+
+@media (max-width: 650px) {
+
+    html{
+    }
+    body{
+        background-image: url("../img/m-img-bg@3x.png");
+        background-size: 375px 900px;
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+
+    .top-banner{
+        height: 67px;
+    }
+
+    .inside-banner{
+        width: 335px;
+        height: 67px;
+    }
+
+    .mobile-background{
+
+        width: 375px;
+        height: 303px;
+        overflow: hidden;
+        z-index: 1;
+        display: none;
+    }
+
+    .logo{
+        z-index: 5;
+    }
+
+    .img_logo{
+        width: 270px;
+        height: 181px;
+    }
+
+    .title{
+        font-size: 36px;
+    }
+
+    .hide_media{
+        display: none;
+    }
+
+    #show_media{
+        display: block;
+    }
+
+    .red-tag{
+        margin-top: 44px;
+    }
+
+    .red-tag-img{
+        width: 176px;
+        height: 36px;
+    }
+
+    .tag-title{
+        font-size: 12px;
+        line-height: 26px;
+    }
+
+    .date{
+        font-size: 20px;
+        font-family: GmarketSans;
+    }
+
+    button{
+        width: 280px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .white-box{
+        width: 375px;
+        height: 979px;
+    }
+
+    .line1{
+        margin-top: 31px;
+        margin-left: 17px;
+    }
+
+    .ico_01{
+        width: 42px;
+        height: 42px;
+    }
+
+    .content-desc{
+        font-size: 14px;
+        width: 335px;
+        margin-top: 21px;
+        margin-left: 20px;
+        line-height: 1.86;
+    }
+
+    .line2{
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+
+    .ico-day{
+        width: 42px;
+        height: 42px;
+    }
+
+    .line3{
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    .year-description{
+        margin-left: 74px;
+    }
+
+    .year-star2{
+        margin-left: 71px;
+    }
+
+    .line5{
+        margin-left: 20px;
+    }
+
+    .left-huwon{
+        margin-left: 20px;
+    }
+
+    .right-huwon3{
+        margin-top: 30px;
+        margin-left: 143px;
+        width: 172px;
+        height: 30px;
+    }
+}
