@@ -134,6 +134,7 @@ button{
     text-align: center;
     color: #802040;
     z-index: 7;
+    cursor: pointer;
 }
 
 .white-box{
@@ -301,6 +302,20 @@ button{
 
 #show_media{
     display: none;
+}
+
+.right-huwon4{
+    width: 170px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 168px;
+}
+
+.right-huwon5{
+    width: 170px;
+    height: 40px;
+    margin-top: 13px;
+    margin-left: 138px;
 }
 
 .mobile{

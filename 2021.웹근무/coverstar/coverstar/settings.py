@@ -66,12 +66,8 @@ WSGI_APPLICATION = 'CoverStar.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dbcoverstar',
-        'USER': 'coverstar',
-        'PASSWORD': 'coverstar2021!',
-        'HOST': '211.47.74.33',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

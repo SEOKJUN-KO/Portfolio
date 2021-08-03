@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Loader } from "semantic-ui-react";
 import Item from "../../src/component/Item";
 
-const Post = ({ item }) => {
+const Post = ({ item, name }) => {
   return (
     <>
       {item && (
@@ -14,6 +14,7 @@ const Post = ({ item }) => {
             <title>{item.name}</title>
             <meta name="description" content={item.description}></meta>
           </Head>
+          {name}
           <Item item={item} />
         </>
       )}
@@ -32,6 +33,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       item: data, // Post의 item으로 넘겨줌
+      name: process.env.name
     },
   };
 }

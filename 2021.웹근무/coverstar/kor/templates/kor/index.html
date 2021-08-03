@@ -4,7 +4,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Title</title>
+        <title>COVERSTAR | 참가 신청서</title>
         <link rel="stylesheet" href="{% static 'css/index.css' %}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
@@ -75,7 +75,7 @@
                 <div class="wrap-form">
                     <form action="{% url 'kor:done' %}" method="post" id="submitted_form">
                         {% csrf_token %}
-                        <div class="application-title">커버스타 신청서</div>
+                        <div class="application-title">커버스타 참가 신청서</div>
 
                         <div class="application-subject">지원자 정보</div>
                         <div class="application-subtitle1"><span style="color:#ef5184;">*</span>이름</div>
@@ -92,7 +92,7 @@
                         <div class="application-subtitle">가장 자신있는 장르</div>
                         <input type="text" name="genre" placeholder=" 발라드, 락, 힙합, 트롯, 등등">
                         <div class="application-subtitle">연주 가능한 악기</div>
-                        <input type="text" name="instrument" placeholder=" 기타, 피아노, 피리, 없음, 등등">
+                        <input type="text" name="instrument" placeholder=" 기타, 피아노, 피리, 등등">
                         <div class="application-subtitle">직업</div>
                         <input type="text" name="job" placeholder=" 학생, 회사원, 주부, 예술인 등등">
 
@@ -101,7 +101,7 @@
                         <input type="text" name="title" value="">
                         <div class="application-subtitle">가수</div>
                         <input type="text" name="singer" value="">
-                        <div class="application-subtitle"><span style="color:#ef5184;">*</span>영상링크</div>
+                        <div class="application-subtitle"><span style="color:#ef5184;">*</span>영상링크(유튜브 URL)</div>
                         <input type="url" id="check4" name="link" placeholder=" https://">
                         <div style="color: red; font-size: 0.1em;" id="checked4"></div>
                         <div class="application-subtitle">한마디</div>
