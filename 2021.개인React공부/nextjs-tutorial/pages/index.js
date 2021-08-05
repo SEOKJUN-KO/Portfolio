@@ -1,42 +1,17 @@
 import axios from 'axios';
 import Head from 'next/head'
-import { useEffect, useState } from 'react';
 import { Divider, Header, Loader } from 'semantic-ui-react';
 import ItemList from '../src/component/ItemList';
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function Home({list}) {
 
-  const [list, setList] = useState([]);
-  const [isLoding, setIsLoading] = useState(true);
-
-  const API_URL = process.env.NEXT_PUBLIC_API_URL;
-    
-
-  function getData(){
-    axios.get(API_URL).then(res=>{
-      console.log(res.data);
-      setList(res.data);
-      setIsLoading(false);
-    })
-  }
-
-  useEffect(() => {
-    getData();
-  }, []);
   return (  
             <div>
               <Head>
                 <title> Home | 고석준 </title>
                 <meta name="description" content="고석준"></meta>
               </Head>
-              {isLoding && (
-                <div style={{ padding: "300px 0"}}>
-                  <Loader inline="centered" active>
-                    Loading
-                  </Loader>
-                </div>
-              )}
               <Header as="h3" style={{paddingTop: 40}}>베스트 상품</Header>
               <Divider />
               <ItemList list={list.slice(0,9)}></ItemList>
@@ -46,4 +21,18 @@ export default function Home() {
             </div>
             
           );
+}
+
+export async function getStaticProps() {
+
+  const apiUrl = process.env.apiUrl;
+  const res = await axios.get(apiUrl);
+  const data = res.data;
+
+  return {
+    props: {
+      list: data,
+      name: process.env.name,
+    },
+  };
 }

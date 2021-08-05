@@ -6,6 +6,20 @@ import { Loader } from "semantic-ui-react";
 import Item from "../../src/component/Item";
 
 const Post = ({ item, name }) => {
+
+  const router = useRouter();
+
+  if(router.isFallback); // isFallback static으로 처리되지 않은 page
+  {
+    return (
+      <div style={{padding: "100px 0"}}>
+        <Loader active inline="centered">
+          Loading
+        </Loader>
+      </div>
+    );
+  }
+
   return (
     <>
       {item && (
@@ -24,7 +38,19 @@ const Post = ({ item, name }) => {
 
 export default Post;
 
-export async function getServerSideProps(context) {
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { id: '740'}},
+      { params: { id: '730'}},
+      { params: { id: '729'}},
+    ],
+    fallback: true, // true = 해당 page 첫번째 접속 시 SSR 두번째 접속 시 저장된 static page, false = 없는 page는 404
+    // dev 모드에서는 params로 주어진 page 이외는 static으로 저장 x 
+  };
+}
+
+export async function getStaticProps(context) {
   const id = context.params.id;
   const apiUrl = `http://makeup-api.herokuapp.com/api/v1/products/${id}.json`;
   const res = await Axios.get(apiUrl);

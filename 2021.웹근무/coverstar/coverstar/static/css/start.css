@@ -297,7 +297,8 @@ button{
 .right-huwon2{
     margin-left: 30px;
     width: 172px;
-    height: 30px;
+    height: 35px;
+    margin-top: 18px;
 }
 
 #show_media{
@@ -315,7 +316,7 @@ button{
     width: 170px;
     height: 40px;
     margin-top: 13px;
-    margin-left: 138px;
+    margin-left: 142px;
 }
 
 .mobile{
@@ -452,9 +453,13 @@ button{
     }
 
     .right-huwon3{
-        margin-top: 30px;
+        margin-top: 25px;
         margin-left: 143px;
         width: 172px;
-        height: 30px;
+        height: 35px;
     }
+}
+
+@media (prefers-color-scheme: dark) {
+
 }
