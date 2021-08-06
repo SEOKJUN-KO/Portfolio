@@ -39,12 +39,21 @@ const Post = ({ item, name }) => {
 export default Post;
 
 export async function getStaticPaths() {
+  const apiUrl = process.env.apiUrl;
+  const res = await axios.get(apiUrl);
+  const data = res.data;
+
   return {
-    paths: [
-      { params: { id: '740'}},
-      { params: { id: '730'}},
-      { params: { id: '729'}},
-    ],
+    // paths: [
+    //   { params: { id: '740'}},
+    //   { params: { id: '730'}},
+    //   { params: { id: '729'}},
+    // ],
+    paths: data.slice(0,9).map((item) => ({ //화면에 표시된 9개의 item을 static page로 생성
+      params: {
+        id: item.id.toString(),
+      },
+    })),
     fallback: true, // true = 해당 page 첫번째 접속 시 SSR 두번째 접속 시 저장된 static page, false = 없는 page는 404
     // dev 모드에서는 params로 주어진 page 이외는 static으로 저장 x 
   };
