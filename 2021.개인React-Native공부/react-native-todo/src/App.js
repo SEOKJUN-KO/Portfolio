@@ -1,36 +1,73 @@
-import React from 'react';
-import styled, {ThemeProvider} from 'styled-components/native';
-import {theme} from './theme';
-import { StatusBar } from 'react-native';
+import React, { useState } from 'react';
+import { StatusBar, Dimensions } from 'react-native';
+import styled, { ThemeProvider } from 'styled-components/native';
+import { theme } from './theme';
 import Input from './components/Input';
+import Task from './components/Task';
 
 const Container = styled.SafeAreaView`
-    flex: 1;
-    background-color: ${({theme}) => theme.background};
-    align-items: center;
-    justify-content: flex-start;
+  flex: 1;
+  background-color: ${({ theme }) => theme.background};
+  align-items: center;
+  justify-content: flex-start;
 `;
 
 const Title = styled.Text`
-    font-size: 40px;
-    font-weight: 600;
-    color: ${({theme}) => theme.main};
-    align-self: flex-start;
-    margin: 0px 20px;
+  font-size: 40px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.main};
+  align-self: flex-start;
+  margin: 20px;
 `;
 
-const App = () => {
-    return(
-        <ThemeProvider theme={theme}>
-            <Container>
-                <StatusBar 
-                    barStyle="light-content"
-                    backgroundColor={theme.background}/>
-                <Title> TODO List</Title>
-                <Input placeholder="+ Add a Task"/>
-            </Container>
-        </ThemeProvider>
-    );
-};
+const List = styled.ScrollView`
+  flex: 1;
+  width: ${({ width }) => width - 40}px;
+`;
 
-export default App;
+export default function App() {
+  const width = Dimensions.get('window').width;
+
+  const [tasks, setTask] = useState({
+    '1': { id: '1', text: 'Korea', completed: false},
+    '2': { id: '2', text: 'React', completed: true},
+    '3': { id: '3', text: 'Native', completed: false},
+    '4': { id: '4', text: 'Edit', completed: false},
+  });
+
+  const [newTask, setNewTask] = useState('');
+
+  const _addTask = () => {
+    alert(`Add: ${newTask}`);
+    setNewTask('');
+  };
+
+  const _handleTextChange = text => {
+    setNewTask(text);
+  };
+
+  return(
+    <ThemeProvider theme={theme}>
+      <Container>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor={theme.background} // Android only
+        />
+        <Title>TODO List</Title>
+        <Input
+          placeholder="+ Add a Task"
+          value={newTask}
+          onChangeText={_handleTextChange}
+          onSubmitEditing={_addTask}
+        />
+        <List width={width}>
+          {Object.values(tasks)
+            .reverse()
+            .map(item => (
+              <Task key={item.id} text={item.text} />
+            ))}
+        </List>
+      </Container>
+    </ThemeProvider> 
+  );
+}
