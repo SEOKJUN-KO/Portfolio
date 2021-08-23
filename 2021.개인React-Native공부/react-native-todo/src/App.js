@@ -28,18 +28,27 @@ const List = styled.ScrollView`
 export default function App() {
   const width = Dimensions.get('window').width;
 
-  const [tasks, setTask] = useState({
+  const [newTask, setNewTask] = useState('');
+  const [tasks, setTasks] = useState({
     '1': { id: '1', text: 'Korea', completed: false},
     '2': { id: '2', text: 'React', completed: true},
     '3': { id: '3', text: 'Native', completed: false},
     '4': { id: '4', text: 'Edit', completed: false},
   });
 
-  const [newTask, setNewTask] = useState('');
-
   const _addTask = () => {
-    alert(`Add: ${newTask}`);
+    const ID = Date.now().toString();
+    const newTaskObject = {
+      [ID]: { id: ID, text: newTask, completed: false},
+    };
     setNewTask('');
+    setTasks({...tasks, ...newTaskObject});
+  };
+
+  const _deleteTask = id => {
+    const currentTasks = Object.assign({}, tasks);
+    delete currentTasks[id];
+    setTasks(currentTasks);
   };
 
   const _handleTextChange = text => {
@@ -64,7 +73,7 @@ export default function App() {
           {Object.values(tasks)
             .reverse()
             .map(item => (
-              <Task key={item.id} text={item.text} />
+              <Task key={item.id} text={item.text} deleteTask = {_deleteTask}/>
             ))}
         </List>
       </Container>
