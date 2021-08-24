@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import { Dimensions } from 'react-native';
+import { Dimensions, useWindowDimensions } from 'react-native';
 import PropTypes from 'prop-types';
 
 const StyledInput = styled.TextInput.attrs(({ theme }) => ({
@@ -21,6 +21,7 @@ const Input = ({
   value,
   onChangeText,
   onSubmitEditing,
+  onBlur,
 }) => {
   const width = Dimensions.get('window').width;
   // const width = useWindowDimensions().width;
@@ -37,6 +38,7 @@ const Input = ({
       value={value}
       onChangeText={onChangeText}
       onSubmitEditing={onSubmitEditing}
+      onBlur={onBlur}
     />
   );
 };
@@ -46,6 +48,7 @@ Input.propTypes = {
   value: PropTypes.string.isRequired,
   onChangeText: PropTypes.func.isRequired,
   onSubmitEditing: PropTypes.func.isRequired,
+  onBlur: PropTypes.func.isRequired,
 };
 
 export default Input;

@@ -36,6 +36,10 @@ export default function App() {
     '4': { id: '4', text: 'Edit', completed: false},
   });
 
+  const _onBlur = () => {
+    setNewTask('');
+  };
+
   const _addTask = () => {
     const ID = Date.now().toString();
     const newTaskObject = {
@@ -50,6 +54,18 @@ export default function App() {
     delete currentTasks[id];
     setTasks(currentTasks);
   };
+
+  const _toggleTask = id => {
+    const currentTasks = Object.assign({}, tasks);
+    currentTasks[id]['completed'] = !currentTasks[id]['completed'];
+    setTasks(currentTasks);
+  };
+
+  const _updateTask = item => {
+    const currentTasks = Object.assign({}, tasks);
+    currentTasks[item.id] = item;
+    setTasks(currentTasks);
+  }
 
   const _handleTextChange = text => {
     setNewTask(text);
@@ -68,15 +84,15 @@ export default function App() {
           value={newTask}
           onChangeText={_handleTextChange}
           onSubmitEditing={_addTask}
+          onBlur = {_onBlur}
         />
         <List width={width}>
           {Object.values(tasks)
             .reverse()
             .map(item => (
-              <Task key={item.id} text={item.text} deleteTask = {_deleteTask}/>
+              <Task key={item.id} item={item} deleteTask = {_deleteTask} toggleTask = {_toggleTask} updateTask = {_updateTask}/>
             ))}
         </List>
       </Container>
-    </ThemeProvider> 
-  );
+    </ThemeProvider> );
 }
